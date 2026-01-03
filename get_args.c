@@ -14,7 +14,7 @@ char* esh_read_line(void) {
     int c;
 
     if (!buffer) {
-        fprintf(stderr, "lsh: allocation error\n");
+        fprintf(stderr, "esh: allocation error\n");
         exit(EXIT_FAILURE);
     }
 
@@ -33,7 +33,7 @@ char* esh_read_line(void) {
             bufsize += ESH_RL_BUFSIZE;
             buffer = realloc(buffer, bufsize);
             if (!buffer) {
-                fprintf(stderr, "lsh: reallocation error\n");
+                fprintf(stderr, "esh: reallocation error\n");
                 exit(EXIT_FAILURE);
             }
         }
@@ -47,7 +47,7 @@ char** esh_split_line(char* line) {
     char* token;
 
     if (!tokens) {
-        fprintf(stderr, "lsh: allocation error\n");
+        fprintf(stderr, "esh: allocation error\n");
         exit(EXIT_FAILURE);
     }
 
@@ -60,7 +60,7 @@ char** esh_split_line(char* line) {
             bufsize += ESH_TOK_BUFSIZE;
             tokens = realloc(tokens, sizeof(char*) * bufsize);
             if (!tokens) {
-                fprintf(stderr, "lsh: reallocation error\n");
+                fprintf(stderr, "esh: reallocation error\n");
                 exit(EXIT_FAILURE);
             }
         }
