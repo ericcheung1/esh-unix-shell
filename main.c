@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <errno.h>
 
 #include "execute.h"
 #include "get_args.h"
@@ -7,6 +9,7 @@
 
 void esh_loop(void);
 void esh_print_title(void);
+void print_dir(void);
 
 int main(int argc, char *argv[]) {
     esh_print_title();
@@ -15,12 +18,24 @@ int main(int argc, char *argv[]) {
     return EXIT_SUCCESS;
 }
 
+void print_dir() {
+    char cwd[1024];
+
+    if (getcwd(cwd, sizeof(cwd)) != NULL) {
+        printf("%s", cwd);
+    } else {
+        perror("getwd error");
+        printf("Cannot compute directory\n");
+    }
+}
+
 void esh_loop(void) {
     char *line;
     char **args;
     int status;
 
     do {
+        print_dir();
         printf(">>> ");
         line = esh_read_line();
         args = esh_split_line(line);
