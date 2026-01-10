@@ -1,16 +1,46 @@
-# esh Unix Shell
+```
+ /$$$$$$$$  /$$$$$$  /$$   /$$           /$$   /$$ /$$   /$$ /$$$$$$ /$$   /$$  /$$$$$$  /$$   /$$ /$$$$$$$$ /$$       /$$      
+| $$_____/ /$$__  $$| $$  | $$          | $$  | $$| $$$ | $$|_  $$_/| $$  / $$ /$$__  $$| $$  | $$| $$_____/| $$      | $$      
+| $$      | $$  \__/| $$  | $$ /$$      | $$  | $$| $$$$| $$  | $$  |  $$/ $$/| $$  \__/| $$  | $$| $$      | $$      | $$      
+| $$$$$   |  $$$$$$ | $$$$$$$$|__/      | $$  | $$| $$ $$ $$  | $$   \  $$$$/ |  $$$$$$ | $$$$$$$$| $$$$$   | $$      | $$      
+| $$__/    \____  $$| $$__  $$          | $$  | $$| $$  $$$$  | $$    >$$  $$  \____  $$| $$__  $$| $$__/   | $$      | $$      
+| $$       /$$  \ $$| $$  | $$ /$$      | $$  | $$| $$\  $$$  | $$   /$$/\  $$ /$$  \ $$| $$  | $$| $$      | $$      | $$      
+| $$$$$$$$|  $$$$$$/| $$  | $$|__/      |  $$$$$$/| $$ \  $$ /$$$$$$| $$  \ $$|  $$$$$$/| $$  | $$| $$$$$$$$| $$$$$$$$| $$$$$$$$
+|________/ \______/ |__/  |__/           \______/ |__/  \__/|______/|__/  |__/ \______/ |__/  |__/|________/|________/|________/
+ ```
+## Overview
 
-This project is a basic implementation of a Unix Shell in C. It is based on Stephen Brennan's tutorial: https://github.com/brenns10/lsh & https://brennan.io/2015/01/16/write-a-shell-in-c/. This version separates Stephen's versiion into source .c and header .h files along with a Makefile for easier compilation. There are many limitations to this simple shell including:
+This is a basic implementation of a Unix/Unix‑like shell written in C. It follows Stephen Brennan’s tutorial https://github.com/brenns10/lsh but reorganizes the codebase into separate `.c` and `.h` files, along with a `Makefile` for easier compilation and maintenance. The startup banner (ASCII splash art) shown at the beginning of each session and above was generated using patorjk’s ASCII art generator https://patorjk.com/software/taag/.
 
-* Only whitespace as separators 
-* Arguments can only be written on one line
-* No quoting arguments or escaping whitespaces
+## Current limitations
+This shell is minimal and has several constraints:
+* Only whitespace is treated as a separator
+* Arguments must appear on a single line
+* No quoting or escaping of whitespace
+* Many other advanced shell features are not implemented
 
+## Original features from Stephen Brennan’s version
+* Built-ins
+  * `cd` - change directories
+  * `help` - display help text
+  * `exit` - exit the shell session
 
-## How to use
+## New features added:
+* Startup banner (ASCII splash art) displayed when the shell launches
+* Custom PS1 prompt with working‑directory expansion and a `%` prompt symbol
+```
+/home/user/current/directory% cd ..
+/home/user/current%
+```
 
-Clone this repo then use the `make` command in the terminal. Then the compiled binary will appear in a `bin/` folder, use `./bin/shell` to start the program.
+## How to run
+
+Clone the repository and run `make` in the project directory. The compiled binary will appear in the `bin/` folder. Start the shell with:
+```
+./bin/shell
+```
+Use it like any other Linux/macOS shell, keeping the noted limitations in mind.
 
 ## Future additions
 
-This project may be used to learn more about operating systems and systems programming. More robust shell features such as quotable arguments and pipes maybe additions in the future.
+More robust shell features such as quotable arguments and pipes could additions in the future.
