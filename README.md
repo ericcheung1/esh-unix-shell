@@ -1,13 +1,5 @@
-```
- /$$$$$$$$  /$$$$$$  /$$   /$$           /$$   /$$ /$$   /$$ /$$$$$$ /$$   /$$  /$$$$$$  /$$   /$$ /$$$$$$$$ /$$       /$$      
-| $$_____/ /$$__  $$| $$  | $$          | $$  | $$| $$$ | $$|_  $$_/| $$  / $$ /$$__  $$| $$  | $$| $$_____/| $$      | $$      
-| $$      | $$  \__/| $$  | $$ /$$      | $$  | $$| $$$$| $$  | $$  |  $$/ $$/| $$  \__/| $$  | $$| $$      | $$      | $$      
-| $$$$$   |  $$$$$$ | $$$$$$$$|__/      | $$  | $$| $$ $$ $$  | $$   \  $$$$/ |  $$$$$$ | $$$$$$$$| $$$$$   | $$      | $$      
-| $$__/    \____  $$| $$__  $$          | $$  | $$| $$  $$$$  | $$    >$$  $$  \____  $$| $$__  $$| $$__/   | $$      | $$      
-| $$       /$$  \ $$| $$  | $$ /$$      | $$  | $$| $$\  $$$  | $$   /$$/\  $$ /$$  \ $$| $$  | $$| $$      | $$      | $$      
-| $$$$$$$$|  $$$$$$/| $$  | $$|__/      |  $$$$$$/| $$ \  $$ /$$$$$$| $$  \ $$|  $$$$$$/| $$  | $$| $$$$$$$$| $$$$$$$$| $$$$$$$$
-|________/ \______/ |__/  |__/           \______/ |__/  \__/|______/|__/  |__/ \______/ |__/  |__/|________/|________/|________/
- ```
+![Alt text for the image](esh-start-screen.png)
+
 ## Overview
 
 This is a basic implementation of a Unix/Unix‑like shell written in C. It follows Stephen Brennan’s tutorial https://github.com/brenns10/lsh but reorganizes the codebase into separate `.c` and `.h` files, along with a `Makefile` for easier compilation and maintenance. The startup banner (ASCII splash art) shown at the beginning of each session and above was generated using patorjk’s ASCII art generator https://patorjk.com/software/taag/.
@@ -43,4 +35,4 @@ Use it like any other Linux/macOS shell, keeping the noted limitations in mind.
 
 ## Future additions
 
-More robust shell features such as quotable arguments and pipes could additions in the future.
+More robust shell features such as quotable arguments and pipes could be additions in the future.
