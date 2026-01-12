@@ -5,8 +5,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "builtins.h"
-#include "execute.h"
+#include "shell_core.h"
+#include "parse_args.h"
+#include "utils.h"
+
+void esh_loop(void) {
+    char *line;
+    char **args;
+    int status;
+
+    do {
+        print_dir();
+        printf("%% ");
+        line = esh_read_line();
+        args = esh_split_line(line);
+        status = esh_execute(args);
+
+        free(line);
+        free(args);
+    } while (status);
+}
 
 int esh_launch(char** args) {
     pid_t pid;
@@ -43,4 +61,3 @@ int esh_execute(char** args) {
 
     return esh_launch(args);
 }
-

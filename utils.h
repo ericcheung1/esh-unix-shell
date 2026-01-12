@@ -1,5 +1,5 @@
-#ifndef BUILTINS_H
-#define BUILTINS_H
+#ifndef UTILS_H
+#define UTILS_H
 
 extern char* builtin_str[];
 
@@ -12,5 +12,9 @@ int esh_cd(char** args);
 int esh_help(char** args);
 
 int esh_exit(char** args);
+
+void print_dir(void);
+
+void esh_print_title(void);
 
 #endif 
