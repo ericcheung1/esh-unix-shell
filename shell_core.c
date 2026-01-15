@@ -10,15 +10,13 @@
 #include "utils.h"
 
 void esh_loop(void) {
-    char *line;
-    char **args;
     int status;
 
     do {
         print_dir();
         printf("%% ");
-        line = esh_read_line();
-        args = esh_split_line(line);
+        char *line = esh_read_line();
+        char **args = esh_split_line(line);
         status = esh_execute(args);
 
         free(line);
@@ -27,10 +25,8 @@ void esh_loop(void) {
 }
 
 int esh_launch(char** args) {
-    pid_t pid;
     int status;
-
-    pid = fork();
+    pid_t pid = fork();
 
     if (pid == 0) {
         if (execvp(args[0], args) == -1) {
