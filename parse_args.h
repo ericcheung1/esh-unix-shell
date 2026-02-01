@@ -1,5 +1,5 @@
 #ifndef PARSE_ARGS_H
-#define PARSE_ARGS_H_H
+#define PARSE_ARGS_H
 
 char* esh_read_line(void);
 

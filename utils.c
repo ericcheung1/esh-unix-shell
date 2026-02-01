@@ -50,7 +50,7 @@ int esh_help(char** args) {
     }
 
     printf("\n");
-    printf("Use the man command for information on other programs\n");
+    printf("type 'man' + enter for information on other programs\n");
     printf("\n");
     return 1;
 }

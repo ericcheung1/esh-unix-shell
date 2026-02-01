@@ -1,5 +1,5 @@
 #ifndef SHELL_CORE_H
-#define SHELL_CORE_H_H
+#define SHELL_CORE_H
 
 int esh_launch(char** args);
 
