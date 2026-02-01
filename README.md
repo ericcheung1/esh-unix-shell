@@ -19,7 +19,7 @@ This shell is minimal and has several constraints:
 
 ## New features added:
 * Startup banner (ASCII splash art) displayed when the shell launches
-* Custom PS1 prompt with working‑directory expansion and a `%` prompt symbol
+* Custom PS1 prompt showing working directory and `%` prompt symbol
 ```
 /home/user/current/directory% cd ..
 /home/user/current%
@@ -33,6 +33,3 @@ Clone the repository and run `make` in the project directory. The compiled binar
 ```
 Use it like any other Linux/macOS shell, keeping the noted limitations in mind.
 
-## Future additions
-
-More robust shell features such as quotable arguments and pipes could be additions in the future.
